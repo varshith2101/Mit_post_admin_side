@@ -5,10 +5,14 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:5174',
+    origin: 'https://mit-post-admin-side.vercel.app',
     methods: ["POST" , "GET"],
     credentials: true
 }))
+
+app.get('/', (req,res) => {
+    res.json("hello");
+})
 
 const mongoose = require('mongoose');
 
